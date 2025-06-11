@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1749610993,,"wq"
+|2,0,1749614742,,"wq"
 
 # Search String History (newest to oldest):
 
@@ -23,80 +23,288 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
+""1	LINE	0
+	server {
+|3,1,1,1,1,0,1749614737,"server {"
+"2	LINE	0
+	  listen 80;
+|3,0,2,1,1,0,1749614737,"  listen 80;"
+"3	LINE	0
+	
+|3,0,3,1,1,0,1749614737,""
+"4	LINE	0
+	  client_max_body_size 10m;
+|3,0,4,1,1,0,1749614736,"  client_max_body_size 10m;"
+"5	LINE	0
+	
+|3,0,5,1,1,0,1749614736,""
+"6	LINE	0
+	  # publicディレクトリをドキュメントルートとして設定
+|3,0,6,1,1,0,1749614736,"  # publicディレクトリをドキュメントルートとして設定"
+"7	LINE	0
+	  root /public/;
+|3,0,7,1,1,0,1749614736,"  root /public/;"
+"8	LINE	0
+	
+|3,0,8,1,1,0,1749614735,""
+"9	LINE	0
+	  # /css/, /js/, /image/ で始まるリクエストはこちらで処理
+|3,0,9,1,1,0,1749614735,"  # /css/, /js/, /image/ で始まるリクエストはこちらで処理"
 
 # File marks:
-'0  18  20  ~/private_isu/webapp/docker-compose.yml
-|4,48,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
-'1  6  0  ~/.gitignore
-|4,49,6,0,1749609631,"~/.gitignore"
-'2  3  0  ~/.gitignore
-|4,50,3,0,1749609219,"~/.gitignore"
-'3  3  0  ~/.gitignore
-|4,51,3,0,1749609219,"~/.gitignore"
-'4  2  0  ~/.gitignore
-|4,52,2,0,1749609188,"~/.gitignore"
-'5  2  0  ~/.gitignore
-|4,53,2,0,1749609188,"~/.gitignore"
-'6  2  0  ~/.gitignore
-|4,54,2,0,1749609188,"~/.gitignore"
-'7  2  0  ~/.gitignore
-|4,55,2,0,1749609188,"~/.gitignore"
-'8  2  0  ~/.gitignore
-|4,56,2,0,1749609102,"~/.gitignore"
-'9  2  0  ~/.gitignore
-|4,57,2,0,1749609102,"~/.gitignore"
+'0  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,48,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+'1  919  0  ~/private_isu/webapp/golang/app.go
+|4,49,919,0,1749614702,"~/private_isu/webapp/golang/app.go"
+'2  915  50  ~/private_isu/webapp/golang/app.go
+|4,50,915,50,1749614546,"~/private_isu/webapp/golang/app.go"
+'3  915  50  ~/private_isu/webapp/golang/app.go
+|4,51,915,50,1749614546,"~/private_isu/webapp/golang/app.go"
+'4  1  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,52,1,0,1749614454,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+'5  29  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,53,29,0,1749614454,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+'6  117  0  ~/private_isu/webapp/golang/app.go
+|4,54,117,0,1749613978,"~/private_isu/webapp/golang/app.go"
+'7  117  0  ~/private_isu/webapp/golang/app.go
+|4,55,117,0,1749613978,"~/private_isu/webapp/golang/app.go"
+'8  117  0  ~/private_isu/webapp/golang/app.go
+|4,56,117,0,1749613978,"~/private_isu/webapp/golang/app.go"
+'9  117  0  ~/private_isu/webapp/golang/app.go
+|4,57,117,0,1749613978,"~/private_isu/webapp/golang/app.go"
 
 # Jumplist (newest first):
+-'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  1  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,1,0,1749614728,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  919  0  ~/private_isu/webapp/golang/app.go
+|4,39,919,0,1749614702,"~/private_isu/webapp/golang/app.go"
+-'  919  0  ~/private_isu/webapp/golang/app.go
+|4,39,919,0,1749614702,"~/private_isu/webapp/golang/app.go"
+-'  915  50  ~/private_isu/webapp/golang/app.go
+|4,39,915,50,1749614677,"~/private_isu/webapp/golang/app.go"
+-'  915  50  ~/private_isu/webapp/golang/app.go
+|4,39,915,50,1749614677,"~/private_isu/webapp/golang/app.go"
+-'  915  50  ~/private_isu/webapp/golang/app.go
+|4,39,915,50,1749614546,"~/private_isu/webapp/golang/app.go"
+-'  915  50  ~/private_isu/webapp/golang/app.go
+|4,39,915,50,1749614546,"~/private_isu/webapp/golang/app.go"
+-'  117  0  ~/private_isu/webapp/golang/app.go
+|4,39,117,0,1749614476,"~/private_isu/webapp/golang/app.go"
+-'  117  0  ~/private_isu/webapp/golang/app.go
+|4,39,117,0,1749614476,"~/private_isu/webapp/golang/app.go"
+-'  117  0  ~/private_isu/webapp/golang/app.go
+|4,39,117,0,1749614476,"~/private_isu/webapp/golang/app.go"
+-'  117  0  ~/private_isu/webapp/golang/app.go
+|4,39,117,0,1749614476,"~/private_isu/webapp/golang/app.go"
+-'  29  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,29,0,1749614454,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  29  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,29,0,1749614454,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  29  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,29,0,1749614454,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  29  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,29,0,1749614454,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  1  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,1,0,1749614423,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  1  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,1,0,1749614423,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  1  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,1,0,1749614423,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  1  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+|4,39,1,0,1749614423,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  117  0  ~/private_isu/webapp/golang/app.go
+|4,39,117,0,1749613978,"~/private_isu/webapp/golang/app.go"
+-'  117  0  ~/private_isu/webapp/golang/app.go
+|4,39,117,0,1749613978,"~/private_isu/webapp/golang/app.go"
+-'  117  0  ~/private_isu/webapp/golang/app.go
+|4,39,117,0,1749613978,"~/private_isu/webapp/golang/app.go"
+-'  117  0  ~/private_isu/webapp/golang/app.go
+|4,39,117,0,1749613978,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749613843,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749613843,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749613843,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749613843,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749613843,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749613843,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749613843,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749613843,"~/private_isu/webapp/golang/app.go"
 -'  18  20  ~/private_isu/webapp/docker-compose.yml
 |4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  18  20  ~/private_isu/webapp/docker-compose.yml
+|4,39,18,20,1749610993,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
+-'  1  0  ~/private_isu/webapp/docker-compose.yml
+|4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
 -'  1  0  ~/private_isu/webapp/docker-compose.yml
 |4,39,1,0,1749610960,"~/private_isu/webapp/docker-compose.yml"
 -'  6  0  ~/.gitignore
 |4,39,6,0,1749609631,"~/.gitignore"
 -'  6  0  ~/.gitignore
 |4,39,6,0,1749609631,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1749609616,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1749609616,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1749609219,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1749609219,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1749609214,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1749609214,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1749609214,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1749609214,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1749609188,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1749609188,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1749609102,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1749609102,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1749609041,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1749609041,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1749609041,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1749609041,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1749609041,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1749609041,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1749609041,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1749609041,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1749609631,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1749609631,"~/.gitignore"
 
 # History of marks within files (newest to oldest):
+
+> ~/private_isu/webapp/etc/nginx/conf.d/default.conf
+	*	1749614741	0
+	"	12	0
+	^	12	0
+	.	11	1
+	+	1	1
+	+	1	8
+	+	11	1
+
+> ~/private_isu/webapp/golang/app.go
+	*	1749614701	0
+	"	919	0
+	^	919	0
+	.	919	0
+	+	5	17
+	+	4	1
+	+	5	4
+	+	118	0
+	+	118	32
+	+	123	1
+	+	117	0
+	+	915	52
+	+	916	58
+	+	918	0
+	+	917	4
+	+	916	0
+	+	917	5
+	+	919	0
 
 > ~/private_isu/webapp/docker-compose.yml
 	*	1749610992	0

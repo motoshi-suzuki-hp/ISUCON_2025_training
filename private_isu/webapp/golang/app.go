@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/sha512"
+    	"encoding/hex"
 	crand "crypto/rand"
 	"fmt"
 	"html/template"
@@ -112,19 +114,12 @@ func validateUser(accountName, password string) bool {
 // 今回のGo実装では言語側のエスケープの仕組みが使えないのでOSコマンドインジェクション対策できない
 // 取り急ぎPHPのescapeshellarg関数を参考に自前で実装
 // cf: http://jp2.php.net/manual/ja/function.escapeshellarg.php
-func escapeshellarg(arg string) string {
-	return "'" + strings.Replace(arg, "'", "'\\''", -1) + "'"
-}
 
 func digest(src string) string {
-	// opensslのバージョンによっては (stdin)= というのがつくので取る
-	out, err := exec.Command("/bin/bash", "-c", `printf "%s" `+escapeshellarg(src)+` | openssl dgst -sha512 | sed 's/^.*= //'`).Output()
-	if err != nil {
-		log.Print(err)
-		return ""
-	}
-
-	return strings.TrimSuffix(string(out), "\n")
+    // 標準ライブラリを使ってSHA512ハッシュを計算
+    hasher := sha512.New()
+    hasher.Write([]byte(src))
+    return hex.EncodeToString(hasher.Sum(nil))
 }
 
 func calculateSalt(accountName string) string {
@@ -919,7 +914,7 @@ func main() {
 	r.Post("/admin/banned", postAdminBanned)
 	r.Get(`/@{accountName:[a-zA-Z]+}`, getAccountName)
 	r.Get("/*", func(w http.ResponseWriter, r *http.Request) {
-		http.FileServer(http.Dir("../public")).ServeHTTP(w, r)
+    		http.FileServer(http.Dir("../public")).ServeHTTP(w, r)
 	})
 
 	log.Fatal(http.ListenAndServe(":8080", r))
