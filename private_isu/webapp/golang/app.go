@@ -171,42 +171,114 @@ func getFlash(w http.ResponseWriter, r *http.Request, key string) string {
 	}
 }
 
+// private_isu/webapp/golang/app.go に記述
+
 func makePosts(results []Post, csrfToken string, allComments bool) ([]Post, error) {
-	var posts []Post
+	if len(results) == 0 {
+		return []Post{}, nil
+	}
 
+	// Step 1: 処理対象の投稿IDをすべて集める
+	postIDs := make([]int, 0, len(results))
 	for _, p := range results {
-		err := db.Get(&p.CommentCount, "SELECT COUNT(*) AS `count` FROM `comments` WHERE `post_id` = ?", p.ID)
+		postIDs = append(postIDs, p.ID)
+	}
+
+	// Step 2: コメント数とコメント情報を投稿IDベースで一括取得
+	// コメント数を一括取得
+	commentCounts := make(map[int]int)
+	queryCounts, argsCounts, err := sqlx.In("SELECT post_id, COUNT(*) AS count FROM comments WHERE post_id IN (?) GROUP BY post_id", postIDs)
+	if err != nil {
+		return nil, err
+	}
+	type commentCountResult struct {
+		PostID int `db:"post_id"`
+		Count  int `db:"count"`
+	}
+	var counts []commentCountResult
+	err = db.Select(&counts, queryCounts, argsCounts...)
+	if err != nil {
+		return nil, err
+	}
+	for _, c := range counts {
+		commentCounts[c.PostID] = c.Count
+	}
+
+	// コメント情報を一括取得
+	queryComments, argsComments, err := sqlx.In("SELECT * FROM comments WHERE post_id IN (?) ORDER BY created_at ASC", postIDs)
+	if err != nil {
+		return nil, err
+	}
+	var allCommentsList []Comment
+	err = db.Select(&allCommentsList, queryComments, argsComments...)
+	if err != nil {
+		return nil, err
+	}
+
+	// Step 3: 必要なユーザーIDを投稿とコメントからすべて集める
+	userIDs := make(map[int]struct{}) // 重複をなくすためにmapを使用
+	for _, p := range results {
+		userIDs[p.UserID] = struct{}{}
+	}
+	for _, c := range allCommentsList {
+		userIDs[c.UserID] = struct{}{}
+	}
+
+	userIDSlice := make([]int, 0, len(userIDs))
+	for id := range userIDs {
+		userIDSlice = append(userIDSlice, id)
+	}
+
+	// Step 4: ユーザー情報をIDベースで一括取得し、マップに格納
+	usersMap := make(map[int]User)
+	if len(userIDSlice) > 0 {
+		queryUsers, argsUsers, err := sqlx.In("SELECT * FROM users WHERE id IN (?)", userIDSlice)
 		if err != nil {
 			return nil, err
 		}
-
-		query := "SELECT * FROM `comments` WHERE `post_id` = ? ORDER BY `created_at` DESC"
-		if !allComments {
-			query += " LIMIT 3"
-		}
-		var comments []Comment
-		err = db.Select(&comments, query, p.ID)
+		var userList []User
+		err = db.Select(&userList, queryUsers, argsUsers...)
 		if err != nil {
 			return nil, err
 		}
+		for _, u := range userList {
+			usersMap[u.ID] = u
+		}
+	}
 
-		for i := 0; i < len(comments); i++ {
-			err := db.Get(&comments[i].User, "SELECT * FROM `users` WHERE `id` = ?", comments[i].UserID)
-			if err != nil {
-				return nil, err
+	// Step 5: コメントにユーザー情報を紐付け、投稿IDごとにまとめる
+	commentsByPostID := make(map[int][]Comment)
+	for _, comment := range allCommentsList {
+		if user, ok := usersMap[comment.UserID]; ok {
+			comment.User = user
+			commentsByPostID[comment.PostID] = append(commentsByPostID[comment.PostID], comment)
+		}
+	}
+
+	// Step 6: 投稿情報に、マップから取得した情報を紐付けて最終的な構造を組み立てる
+	var posts []Post
+	for _, p := range results {
+		// 投稿者情報を紐付け
+		if user, ok := usersMap[p.UserID]; ok {
+			p.User = user
+		} else {
+			// ユーザーが見つからない場合はスキップ（削除済みユーザーなど）
+			continue
+		}
+
+		// コメント数を紐付け
+		if count, ok := commentCounts[p.ID]; ok {
+			p.CommentCount = count
+		}
+
+		// コメント情報を紐付け
+		if comments, ok := commentsByPostID[p.ID]; ok {
+			if !allComments && len(comments) > 3 {
+				// allComments=falseの場合、最新の3件のみ表示
+				p.Comments = comments[len(comments)-3:]
+			} else {
+				p.Comments = comments
 			}
-		}
-
-		// reverse
-		for i, j := 0, len(comments)-1; i < j; i, j = i+1, j-1 {
-			comments[i], comments[j] = comments[j], comments[i]
-		}
-
-		p.Comments = comments
-
-		err = db.Get(&p.User, "SELECT * FROM `users` WHERE `id` = ?", p.UserID)
-		if err != nil {
-			return nil, err
 		}
 
 		p.CSRFToken = csrfToken
