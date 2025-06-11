@@ -198,3 +198,19 @@ git add .
 git status
 htop
 exit
+git status
+git status
+git status
+htop
+git status
+git add .
+git status
+sudo pt-query-digest /var/log/mysql/mariadb-slow.log
+exit
+sudo pt-query-digest /var/log/mysql/mariadb-slow.log
+exit
+mysql -u isuconp -p
+sudo pt-query-digest /var/log/mysql/mariadb-slow.log
+exit
+mysql -u isuconp -p
+exit

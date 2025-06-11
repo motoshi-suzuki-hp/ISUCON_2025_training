@@ -12,9 +12,11 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1749620804,,"wq"
+|2,0,1749622339,,"wq"
+:%d
+|2,0,1749622331,,"%d"
 :q!
-|2,0,1749617034,,"q!"
+|2,0,1749622325,,"q!"
 
 # Search String History (newest to oldest):
 
@@ -25,259 +27,288 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
-""1	LINE	0
-		err := db.Select(&results, "SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC")
-|3,1,1,1,1,0,1749620542,"	err := db.Select(&results, \"SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC\")"
 "2	LINE	0
-	}
-|3,0,2,1,1,0,1749617022,"}"
+		err := db.Select(&results, "SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC")
+|3,0,2,1,1,0,1749620542,"	err := db.Select(&results, \"SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC\")"
 "3	LINE	0
-	  }
-|3,0,3,1,1,0,1749617021,"  }"
+		err := db.Select(&results, "SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC")
+|3,0,3,1,1,0,1749620542,"	err := db.Select(&results, \"SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC\")"
 "4	LINE	0
-	    proxy_pass http://app:8080;
-|3,0,4,1,1,0,1749617021,"    proxy_pass http://app:8080;"
+		err := db.Select(&results, "SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC")
+|3,0,4,1,1,0,1749620542,"	err := db.Select(&results, \"SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC\")"
 "5	LINE	0
-	    proxy_set_header Host $host;
-|3,0,5,1,1,0,1749617021,"    proxy_set_header Host $host;"
+		err := db.Select(&results, "SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC")
+|3,0,5,1,1,0,1749620542,"	err := db.Select(&results, \"SELECT `id`, `user_id`, `body`, `mime`, `created_at` FROM `posts` ORDER BY `created_at` DESC\")"
 "6	LINE	0
-	  location / {
-|3,0,6,1,1,0,1749617020,"  location / {"
+	}
+|3,0,6,1,1,0,1749617022,"}"
 "7	LINE	0
-	
-|3,0,7,1,1,0,1749617020,""
+	  }
+|3,0,7,1,1,0,1749617021,"  }"
 "8	LINE	0
-	  root /public/;
-|3,0,8,1,1,0,1749617020,"  root /public/;"
+	    proxy_pass http://app:8080;
+|3,0,8,1,1,0,1749617021,"    proxy_pass http://app:8080;"
 "9	LINE	0
-	  client_max_body_size 10m;
-|3,0,9,1,1,0,1749617019,"  client_max_body_size 10m;"
+	    proxy_set_header Host $host;
+|3,0,9,1,1,0,1749617021,"    proxy_set_header Host $host;"
 
 # File marks:
-'0  8  2  ~/.gitignore
-|4,48,8,2,1749620804,"~/.gitignore"
-'1  456  0  ~/private_isu/webapp/golang/app.go
-|4,49,456,0,1749620567,"~/private_isu/webapp/golang/app.go"
-'2  13  3  ~/private_isu/webapp/golang/app.go
-|4,50,13,3,1749617103,"~/private_isu/webapp/golang/app.go"
-'3  13  3  ~/private_isu/webapp/golang/app.go
-|4,51,13,3,1749617103,"~/private_isu/webapp/golang/app.go"
-'4  10  0  /etc/nginx/sites-enabled/isucon.conf
-|4,52,10,0,1749617034,"/etc/nginx/sites-enabled/isucon.conf"
-'5  917  8  ~/private_isu/webapp/golang/app.go
-|4,53,917,8,1749616993,"~/private_isu/webapp/golang/app.go"
-'6  918  8  ~/private_isu/webapp/golang/app.go
-|4,54,918,8,1749616993,"~/private_isu/webapp/golang/app.go"
-'7  916  8  ~/private_isu/webapp/golang/app.go
-|4,55,916,8,1749616993,"~/private_isu/webapp/golang/app.go"
-'8  917  8  ~/private_isu/webapp/golang/app.go
-|4,56,917,8,1749616993,"~/private_isu/webapp/golang/app.go"
-'9  915  50  ~/private_isu/webapp/golang/app.go
-|4,57,915,50,1749616527,"~/private_isu/webapp/golang/app.go"
+'0  966  0  ~/private_isu/webapp/golang/app.go
+|4,48,966,0,1749622339,"~/private_isu/webapp/golang/app.go"
+'1  1  0  ~/private_isu/webapp/golang/app.go
+|4,49,1,0,1749622325,"~/private_isu/webapp/golang/app.go"
+'2  1  0  ~/private_isu/webapp/golang/app.go
+|4,50,1,0,1749622325,"~/private_isu/webapp/golang/app.go"
+'3  1  0  ~/private_isu/webapp/golang/app.go
+|4,51,1,0,1749622135,"~/private_isu/webapp/golang/app.go"
+'4  1  0  ~/private_isu/webapp/golang/app.go
+|4,52,1,0,1749622135,"~/private_isu/webapp/golang/app.go"
+'5  964  0  ~/private_isu/webapp/golang/app.go
+|4,53,964,0,1749622135,"~/private_isu/webapp/golang/app.go"
+'6  964  0  ~/private_isu/webapp/golang/app.go
+|4,54,964,0,1749622135,"~/private_isu/webapp/golang/app.go"
+'7  2  0  ~/private_isu/webapp/golang/app
+|4,55,2,0,1749621969,"~/private_isu/webapp/golang/app"
+'8  1  0  ~/private_isu/webapp/golang/app.go
+|4,56,1,0,1749621599,"~/private_isu/webapp/golang/app.go"
+'9  1  0  ~/private_isu/webapp/golang/app.go
+|4,57,1,0,1749621599,"~/private_isu/webapp/golang/app.go"
 
 # Jumplist (newest first):
+-'  966  0  ~/private_isu/webapp/golang/app.go
+|4,39,966,0,1749622339,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749622331,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749622325,"~/private_isu/webapp/golang/app.go"
+-'  964  0  ~/private_isu/webapp/golang/app.go
+|4,39,964,0,1749622135,"~/private_isu/webapp/golang/app.go"
+-'  964  0  ~/private_isu/webapp/golang/app.go
+|4,39,964,0,1749622135,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749622131,"~/private_isu/webapp/golang/app.go"
+-'  2  0  ~/private_isu/webapp/golang/app
+|4,39,2,0,1749621969,"~/private_isu/webapp/golang/app"
+-'  2  0  ~/private_isu/webapp/golang/app
+|4,39,2,0,1749621969,"~/private_isu/webapp/golang/app"
+-'  2  0  ~/private_isu/webapp/golang/app
+|4,39,2,0,1749621969,"~/private_isu/webapp/golang/app"
+-'  2  0  ~/private_isu/webapp/golang/app
+|4,39,2,0,1749621969,"~/private_isu/webapp/golang/app"
+-'  2  0  ~/private_isu/webapp/golang/app
+|4,39,2,0,1749621969,"~/private_isu/webapp/golang/app"
+-'  2  0  ~/private_isu/webapp/golang/app
+|4,39,2,0,1749621969,"~/private_isu/webapp/golang/app"
+-'  2  0  ~/private_isu/webapp/golang/app
+|4,39,2,0,1749621969,"~/private_isu/webapp/golang/app"
+-'  2  0  ~/private_isu/webapp/golang/app
+|4,39,2,0,1749621969,"~/private_isu/webapp/golang/app"
+-'  1  0  ~/private_isu/webapp/golang/app
+|4,39,1,0,1749621963,"~/private_isu/webapp/golang/app"
+-'  1  0  ~/private_isu/webapp/golang/app
+|4,39,1,0,1749621963,"~/private_isu/webapp/golang/app"
+-'  1  0  ~/private_isu/webapp/golang/app
+|4,39,1,0,1749621963,"~/private_isu/webapp/golang/app"
+-'  1  0  ~/private_isu/webapp/golang/app
+|4,39,1,0,1749621963,"~/private_isu/webapp/golang/app"
+-'  1  0  ~/private_isu/webapp/golang/app
+|4,39,1,0,1749621963,"~/private_isu/webapp/golang/app"
+-'  1  0  ~/private_isu/webapp/golang/app
+|4,39,1,0,1749621963,"~/private_isu/webapp/golang/app"
+-'  1  0  ~/private_isu/webapp/golang/app
+|4,39,1,0,1749621963,"~/private_isu/webapp/golang/app"
+-'  1  0  ~/private_isu/webapp/golang/app
+|4,39,1,0,1749621963,"~/private_isu/webapp/golang/app"
+-'  965  0  ~/private_isu/webapp/golang/app.go
+|4,39,965,0,1749621599,"~/private_isu/webapp/golang/app.go"
+-'  965  0  ~/private_isu/webapp/golang/app.go
+|4,39,965,0,1749621599,"~/private_isu/webapp/golang/app.go"
+-'  965  0  ~/private_isu/webapp/golang/app.go
+|4,39,965,0,1749621599,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749621594,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749621594,"~/private_isu/webapp/golang/app.go"
+-'  965  0  ~/private_isu/webapp/golang/app.go
+|4,39,965,0,1749621102,"~/private_isu/webapp/golang/app.go"
+-'  965  0  ~/private_isu/webapp/golang/app.go
+|4,39,965,0,1749621102,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749621097,"~/private_isu/webapp/golang/app.go"
+-'  1  0  ~/private_isu/webapp/golang/app.go
+|4,39,1,0,1749621097,"~/private_isu/webapp/golang/app.go"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
+-'  8  2  ~/.gitignore
+|4,39,8,2,1749620804,"~/.gitignore"
 -'  8  2  ~/.gitignore
 |4,39,8,2,1749620804,"~/.gitignore"
 -'  6  0  ~/.gitignore
 |4,39,6,0,1749620792,"~/.gitignore"
--'  456  0  ~/private_isu/webapp/golang/app.go
-|4,39,456,0,1749620567,"~/private_isu/webapp/golang/app.go"
--'  456  0  ~/private_isu/webapp/golang/app.go
-|4,39,456,0,1749620567,"~/private_isu/webapp/golang/app.go"
--'  13  3  ~/private_isu/webapp/golang/app.go
-|4,39,13,3,1749620501,"~/private_isu/webapp/golang/app.go"
--'  13  3  ~/private_isu/webapp/golang/app.go
-|4,39,13,3,1749620501,"~/private_isu/webapp/golang/app.go"
--'  13  3  ~/private_isu/webapp/golang/app.go
-|4,39,13,3,1749617103,"~/private_isu/webapp/golang/app.go"
--'  13  3  ~/private_isu/webapp/golang/app.go
-|4,39,13,3,1749617103,"~/private_isu/webapp/golang/app.go"
--'  917  8  ~/private_isu/webapp/golang/app.go
-|4,39,917,8,1749617085,"~/private_isu/webapp/golang/app.go"
--'  916  8  ~/private_isu/webapp/golang/app.go
-|4,39,916,8,1749617085,"~/private_isu/webapp/golang/app.go"
--'  917  8  ~/private_isu/webapp/golang/app.go
-|4,39,917,8,1749617085,"~/private_isu/webapp/golang/app.go"
--'  916  8  ~/private_isu/webapp/golang/app.go
-|4,39,916,8,1749617085,"~/private_isu/webapp/golang/app.go"
--'  10  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,10,0,1749617034,"/etc/nginx/sites-enabled/isucon.conf"
--'  10  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,10,0,1749617034,"/etc/nginx/sites-enabled/isucon.conf"
--'  10  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,10,0,1749617034,"/etc/nginx/sites-enabled/isucon.conf"
--'  10  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,10,0,1749617034,"/etc/nginx/sites-enabled/isucon.conf"
--'  10  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,10,0,1749617034,"/etc/nginx/sites-enabled/isucon.conf"
--'  10  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,10,0,1749617034,"/etc/nginx/sites-enabled/isucon.conf"
--'  10  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,10,0,1749617034,"/etc/nginx/sites-enabled/isucon.conf"
--'  10  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,10,0,1749617034,"/etc/nginx/sites-enabled/isucon.conf"
--'  1  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,1,0,1749617014,"/etc/nginx/sites-enabled/isucon.conf"
--'  1  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,1,0,1749617014,"/etc/nginx/sites-enabled/isucon.conf"
--'  1  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,1,0,1749617014,"/etc/nginx/sites-enabled/isucon.conf"
--'  1  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,1,0,1749617014,"/etc/nginx/sites-enabled/isucon.conf"
--'  1  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,1,0,1749617014,"/etc/nginx/sites-enabled/isucon.conf"
--'  1  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,1,0,1749617014,"/etc/nginx/sites-enabled/isucon.conf"
--'  1  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,1,0,1749617014,"/etc/nginx/sites-enabled/isucon.conf"
--'  1  0  /etc/nginx/sites-enabled/isucon.conf
-|4,39,1,0,1749617014,"/etc/nginx/sites-enabled/isucon.conf"
--'  918  8  ~/private_isu/webapp/golang/app.go
-|4,39,918,8,1749616993,"~/private_isu/webapp/golang/app.go"
--'  917  8  ~/private_isu/webapp/golang/app.go
-|4,39,917,8,1749616993,"~/private_isu/webapp/golang/app.go"
--'  917  8  ~/private_isu/webapp/golang/app.go
-|4,39,917,8,1749616993,"~/private_isu/webapp/golang/app.go"
--'  918  8  ~/private_isu/webapp/golang/app.go
-|4,39,918,8,1749616993,"~/private_isu/webapp/golang/app.go"
--'  917  8  ~/private_isu/webapp/golang/app.go
-|4,39,917,8,1749616993,"~/private_isu/webapp/golang/app.go"
--'  917  8  ~/private_isu/webapp/golang/app.go
-|4,39,917,8,1749616993,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  916  50  ~/private_isu/webapp/golang/app.go
-|4,39,916,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  914  50  ~/private_isu/webapp/golang/app.go
-|4,39,914,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  916  50  ~/private_isu/webapp/golang/app.go
-|4,39,916,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  914  50  ~/private_isu/webapp/golang/app.go
-|4,39,914,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616979,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616527,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616527,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616527,"~/private_isu/webapp/golang/app.go"
--'  915  50  ~/private_isu/webapp/golang/app.go
-|4,39,915,50,1749616527,"~/private_isu/webapp/golang/app.go"
--'  915  0  ~/private_isu/webapp/golang/app.go
-|4,39,915,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  916  0  ~/private_isu/webapp/golang/app.go
-|4,39,916,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  916  0  ~/private_isu/webapp/golang/app.go
-|4,39,916,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  916  0  ~/private_isu/webapp/golang/app.go
-|4,39,916,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  916  0  ~/private_isu/webapp/golang/app.go
-|4,39,916,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  915  0  ~/private_isu/webapp/golang/app.go
-|4,39,915,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  916  0  ~/private_isu/webapp/golang/app.go
-|4,39,916,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  916  0  ~/private_isu/webapp/golang/app.go
-|4,39,916,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  916  0  ~/private_isu/webapp/golang/app.go
-|4,39,916,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  916  0  ~/private_isu/webapp/golang/app.go
-|4,39,916,0,1749616503,"~/private_isu/webapp/golang/app.go"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
--'  12  0  ~/private_isu/webapp/etc/nginx/conf.d/default.conf
-|4,39,12,0,1749614742,"~/private_isu/webapp/etc/nginx/conf.d/default.conf"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1749620792,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1749620792,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1749620792,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1749620792,"~/.gitignore"
 
 # History of marks within files (newest to oldest):
+
+> ~/private_isu/webapp/golang/app.go
+	*	1749622337	0
+	"	966	0
+	^	966	0
+	.	966	0
+	+	1	17
+	+	1	1
+	+	1	4
+	+	1	0
+	+	1	32
+	+	1	1
+	+	1	0
+	+	1	52
+	+	1	109
+	+	1	170
+	+	1	114
+	+	1	51
+	+	1	115
+	+	1	0
+	+	1	4
+	+	1	8
+	+	1	5
+	+	1	4
+	+	1	1
+	+	1	130
+	+	1	12
+	+	966	0
+
+> ~/private_isu/webapp/golang/app
+	*	1749621968	0
+	"	2	0
 
 > ~/.gitignore
 	*	1749620801	0
@@ -288,34 +319,6 @@
 	+	3	0
 	+	5	7
 	+	8	2
-
-> ~/private_isu/webapp/golang/app.go
-	*	1749620566	0
-	"	456	0
-	^	456	1
-	.	456	0
-	+	5	17
-	+	4	1
-	+	5	4
-	+	117	0
-	+	117	32
-	+	122	1
-	+	116	0
-	+	915	52
-	+	915	109
-	+	915	170
-	+	915	114
-	+	915	51
-	+	915	115
-	+	916	0
-	+	919	0
-	+	918	4
-	+	917	8
-	+	13	5
-	+	13	4
-	+	457	1
-	+	456	130
-	+	456	0
 
 > /etc/nginx/sites-enabled/isucon.conf
 	*	1749617028	0

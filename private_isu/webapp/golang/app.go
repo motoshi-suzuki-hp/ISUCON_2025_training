@@ -1,9 +1,10 @@
 package main
 
 import (
-	"crypto/sha512"
-    	"encoding/hex"
+	"bytes"
 	crand "crypto/rand"
+	"crypto/sha512"
+	"encoding/hex"
 	"fmt"
 	"html/template"
 	"io"
@@ -26,8 +27,9 @@ import (
 )
 
 var (
-	db    *sqlx.DB
-	store *gsm.MemcacheStore
+	db             *sqlx.DB
+	store          *gsm.MemcacheStore
+	memcacheClient *memcache.Client
 )
 
 const (
@@ -72,7 +74,7 @@ func init() {
 	if memdAddr == "" {
 		memdAddr = "localhost:11211"
 	}
-	memcacheClient := memcache.New(memdAddr)
+	memcacheClient = memcache.New(memdAddr)
 	store = gsm.NewMemcacheStore(memcacheClient, "iscogram_", []byte("sendagaya"))
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 }
@@ -115,10 +117,10 @@ func validateUser(accountName, password string) bool {
 // cf: http://jp2.php.net/manual/ja/function.escapeshellarg.php
 
 func digest(src string) string {
-    // 標準ライブラリを使ってSHA512ハッシュを計算
-    hasher := sha512.New()
-    hasher.Write([]byte(src))
-    return hex.EncodeToString(hasher.Sum(nil))
+	// 標準ライブラリを使ってSHA512ハッシュを計算
+	hasher := sha512.New()
+	hasher.Write([]byte(src))
+	return hex.EncodeToString(hasher.Sum(nil))
 }
 
 func calculateSalt(accountName string) string {
@@ -450,6 +452,17 @@ func getLogout(w http.ResponseWriter, r *http.Request) {
 func getIndex(w http.ResponseWriter, r *http.Request) {
 	me := getSessionUser(r)
 
+	if !isLogin(me) {
+		cacheKey := "htmlcache:index:anonymous"
+		cachedItem, err := memcacheClient.Get(cacheKey)
+		if err == nil {
+			// Cache hit
+			w.Header().Set("Content-Type", "text/html; charset=utf-8")
+			w.Write(cachedItem.Value)
+			return
+		}
+	}
+
 	results := []Post{}
 
 	// LIMIT句を追加して、取得する投稿を20件に絞る
@@ -469,17 +482,36 @@ func getIndex(w http.ResponseWriter, r *http.Request) {
 		"imageURL": imageURL,
 	}
 
-	template.Must(template.New("layout.html").Funcs(fmap).ParseFiles(
+	// Render to buffer
+	var buf bytes.Buffer
+	err = template.Must(template.New("layout.html").Funcs(fmap).ParseFiles(
 		getTemplPath("layout.html"),
 		getTemplPath("index.html"),
 		getTemplPath("posts.html"),
 		getTemplPath("post.html"),
-	)).Execute(w, struct {
+	)).Execute(&buf, struct {
 		Posts     []Post
 		Me        User
 		CSRFToken string
 		Flash     string
 	}{posts, me, getCSRFToken(r), getFlash(w, r, "notice")})
+
+	if err != nil {
+		log.Print(err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+
+	if !isLogin(me) {
+		cacheKey := "htmlcache:index:anonymous"
+		err = memcacheClient.Set(&memcache.Item{Key: cacheKey, Value: buf.Bytes(), Expiration: 600})
+		if err != nil {
+			log.Printf("Failed to set cache: %v", err)
+		}
+	}
+
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	w.Write(buf.Bytes())
 }
 
 func getAccountName(w http.ResponseWriter, r *http.Request) {
@@ -734,6 +766,12 @@ func postIndex(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Purge index cache
+	cacheKey := "htmlcache:index:anonymous"
+	if err := memcacheClient.Delete(cacheKey); err != nil && err != memcache.ErrCacheMiss {
+		log.Printf("Failed to delete cache: %v", err)
+	}
+
 	http.Redirect(w, r, "/posts/"+strconv.FormatInt(pid, 10), http.StatusFound)
 }
 
@@ -792,6 +830,12 @@ func postComment(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Print(err)
 		return
+	}
+
+	// Purge index cache
+	cacheKey := "htmlcache:index:anonymous"
+	if err := memcacheClient.Delete(cacheKey); err != nil && err != memcache.ErrCacheMiss {
+		log.Printf("Failed to delete cache: %v", err)
 	}
 
 	http.Redirect(w, r, fmt.Sprintf("/posts/%d", postID), http.StatusFound)
@@ -914,8 +958,9 @@ func main() {
 	r.Post("/admin/banned", postAdminBanned)
 	r.Get(`/@{accountName:[a-zA-Z]+}`, getAccountName)
 	r.Get("/*", func(w http.ResponseWriter, r *http.Request) {
-        	http.FileServer(http.Dir("../public")).ServeHTTP(w, r)
-    	})
+		http.FileServer(http.Dir("../public")).ServeHTTP(w, r)
+	})
 
 	log.Fatal(http.ListenAndServe(":8080", r))
 }
+
