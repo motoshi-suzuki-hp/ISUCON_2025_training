@@ -1,0 +1,8 @@
+backup
+go
+.local
+.cache
+.bundle
+
+.ssh/
+.ssh/
